@@ -1,0 +1,13 @@
+<h1>Best Cocktails</h1>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li>
+	    <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+	    <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
+	    <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to "Add more here!", new_cocktail_path %>
