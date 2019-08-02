@@ -1,13 +1,13 @@
-<h1>Best Cocktails</h1>
-
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-	    <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
-	    <%= link_to 'Edit', edit_cocktail_path(cocktail) %>
-	    <%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
-    <% end %>
-</ul>
-
-<%= link_to "Add more here!", new_cocktail_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1517087209106-3f42cd661afa?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80);">
+  <div class="container">
+    <h1> <strong>Best Cocktails</strong> for <strong>The Best</strong>!</h1>
+      <ul>
+        <% @cocktails.each do |cocktail| %>
+        <li>
+	      <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+        </li>
+        <% end %>
+      </ul>   
+    <a class="alert alert-success" href="/cocktails/new">Add me</a>
+  </div>
+</div>
